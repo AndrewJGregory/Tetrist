@@ -31,12 +31,14 @@ main {
 .square {
   height: 20px;
   width: 20px;
-  background-color: blue;
 }
 
 .row {
   height: 20px;
   width: 200px;
-  background-color: red;
   display: flex;
+}
+
+.isPiece {
+  background-color: red;
 }

@@ -14,7 +14,7 @@ With Tetrist, users will be able to:
 
 ## Wireframes
 
-[Tetrist Wireframe](http://res.cloudinary.com/procify/image/upload/v1516179907/Tetrist_gkajng.png)
+![Tetrist Wireframe](http://res.cloudinary.com/procify/image/upload/v1516179907/Tetrist_gkajng.png)
 
 "Next piece" will only be displayed after the game is started.
 

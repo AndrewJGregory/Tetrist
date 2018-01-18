@@ -39,6 +39,30 @@ main {
   display: flex;
 }
 
-.isPiece {
+.red {
   background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.green {
+  background-color: green;
+}
+
+.black {
+  background-color: black;
 }

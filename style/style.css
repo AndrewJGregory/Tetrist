@@ -8,16 +8,6 @@ main {
   margin-top: 50px;
 }
 
-#board {
-  height: 600px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-color: green;
-}
-
-
 .links {
   margin-top: 20px;
   display: flex;
@@ -61,4 +51,13 @@ main {
 
 .black {
   background-color: black;
+}
+
+#board {
+  height: 600px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: green;
 }

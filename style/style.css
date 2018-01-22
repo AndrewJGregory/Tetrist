@@ -1,11 +1,31 @@
+body {
+  background-image: url('../assets/background.png');
+}
+
+h1 {
+  font-family: 'Monoton', cursive;
+  color: white;
+  padding-bottom: 10px;
+  font-size: 48px;
+  letter-spacing: 2px;
+}
+
 main {
   margin: 0 auto;
-  background-color: purple;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+}
+
+#board {
+  height: 600px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: green;
 }
 
 .links {
@@ -51,13 +71,4 @@ main {
 
 .black {
   background-color: black;
-}
-
-#board {
-  height: 600px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-color: green;
 }

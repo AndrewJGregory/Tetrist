@@ -5,10 +5,12 @@
   <title></title>
   <link rel="stylesheet" href="./style/reset.css">
   <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/modal.css">
   <script src="https://cdn.rawgit.com/AndrewJGregory/DOMination/78bdcc3e/lib/domination.js" charset="utf-8"></script>
   <script src="https://use.fontawesome.com/a09959baca.js"></script>
   <script src="./lib/bundle.js" charset="utf-8"></script>
   <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
   <main>
@@ -28,5 +30,23 @@
       </li>
     </ul>
   </main>
+  <div id="welcomeModal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to Tetrist!</h2>
+      <h3>How to play:</h3>
+      <br>
+      <ul>
+        <li>Use the ASD keys to move a piece left, down, and right respectively.</li>
+        <li>Use QE to rotate the piece counter-clockwise and clockwise.</li>
+        <li>Press the spacebar to pause or resume the game.</li>
+        <li>Form rows with the pieces to score points!</li>
+        <li>The game is over when the pieces overflow the top of the board.</li>
+        <li>Click anywhere outside of this message to get started!</li>
+        <li>Enjoy :)</li>
+      </ul>
+
+    </div>
+
+  </div>
 </body>
 </html>

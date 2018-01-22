@@ -14,43 +14,49 @@
 </head>
 <body>
   <main>
-    <h1>Tetrist</h1>
-    <section id="board">
-    </section>
-    <ul class='links'>
-      <li>
-        <a href="https://www.linkedin.com/in/andrewjgregoryajg/">
-          <i class="fa fa-linkedin" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/AndrewJGregory/">
-          <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
-      </li>
-    </ul>
+    <div class='title-board-links-wrapper'>
+      <h1>Tetrist</h1>
+
+      <section id="board">
+      </section>
+      <ul class='links'>
+        <li>
+          <a href="https://www.linkedin.com/in/andrewjgregoryajg/">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/AndrewJGregory/">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <aside class="scoreCounter">
+      Rows cleared: 0
+    </aside>
   </main>
   <div id="welcomeModal" class="modal">
     <div class="modal-content">
       <h3>Welcome to Tetrist!</h2>
-      <h4>How to play:</h3>
-      <br>
-      <ul>
-        <li>Use the ASD keys to move a piece left, down, and right respectively.</li>
-        <li>Use QE to rotate the piece counter-clockwise and clockwise.</li>
-        <li>Press the spacebar to pause or resume the game.</li>
-        <li>Form rows with the pieces to score points!</li>
-        <li>The game is over when the pieces overflow the top of the board.</li>
-        <li>Click anywhere outside of this message to get started!</li>
-        <li>Enjoy :)</li>
-      </ul>
-    </div>
-  </div>
-  <div id="playPauseModal" class="modal">
-    <div class="modal-content">
-      <h3>PAUSED</h3>
-      <p>Press the spacebar to resume playing.</p>
-    </div>
-  </div>
-</body>
-</html>
+        <h4>How to play:</h3>
+          <br>
+          <ul>
+            <li>Use the ASD keys to move a piece left, down, and right respectively.</li>
+            <li>Use QE to rotate the piece counter-clockwise and clockwise.</li>
+            <li>Press the spacebar to pause or resume the game.</li>
+            <li>Form rows with the pieces to score points!</li>
+            <li>The game is over when the pieces overflow the top of the board.</li>
+            <li>Click anywhere outside of this message to get started!</li>
+            <li>Enjoy :)</li>
+          </ul>
+        </div>
+      </div>
+      <div id="playPauseModal" class="modal">
+        <div class="modal-content">
+          <h3>PAUSED</h3>
+          <p>Press the spacebar to resume playing.</p>
+        </div>
+      </div>
+    </body>
+    </html>

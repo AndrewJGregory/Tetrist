@@ -25,7 +25,7 @@
     justify-content: center;
 }
 
-#playPauseModal {
+#playPauseModal, #gameOverModal {
   display: none;
 }
 

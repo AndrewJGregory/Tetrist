@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="./style/reset.css">
-  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/piece.css">
   <link rel="stylesheet" href="./style/modal.css">
   <script src="https://cdn.rawgit.com/AndrewJGregory/DOMination/78bdcc3e/lib/domination.js" charset="utf-8"></script>
   <script src="https://use.fontawesome.com/a09959baca.js"></script>
@@ -13,27 +14,44 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-  <main>
-    <div class='title-board-links-wrapper'>
+  <main className='center'>
+    <aside class='directions center'>
+      Directions:
+      <ul>
+        <li>Use the ASD keys to move a piece left, down, and right respectively.</li>
+        <li>Use QE to rotate the piece counter-clockwise and clockwise.</li>
+        <li>Press the spacebar to pause or resume the game.</li>
+        <li>Form rows with pieces to score points!</li>
+        <li>The game is over when the pieces overflow the top of the board.</li>
+      </ul>
+    </aside>
+    <div class='title-board-links-wrapper center'>
       <h1>Tetrist</h1>
-
       <section id="board">
       </section>
-      <ul class='links'>
-        <li>
-          <a href="https://www.linkedin.com/in/andrewjgregoryajg/">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/AndrewJGregory/">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
+      <div class="footer-container center">
+        <ul class='footer-links'>
+          <li>
+            <a href="https://www.linkedin.com/in/andrewjgregoryajg/">
+              <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/AndrewJGregory/">
+              <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+        <h3 class='footer-text'>
+          Made by
+          <a href="http://andrewjgregoryajg.com">Andrew Gregory!</a>
+        </h3>
+      </div>
     </div>
-    <aside class="scoreCounter">
-      Rows cleared: 0
+    <aside class="scoreCounter center">
+      Rows
+      cleared:
+      0
     </aside>
   </main>
   <div id="welcomeModal" class="modal">
@@ -45,7 +63,7 @@
             <li>Use the ASD keys to move a piece left, down, and right respectively.</li>
             <li>Use QE to rotate the piece counter-clockwise and clockwise.</li>
             <li>Press the spacebar to pause or resume the game.</li>
-            <li>Form rows with the pieces to score points!</li>
+            <li>Form rows with pieces to score points!</li>
             <li>The game is over when the pieces overflow the top of the board.</li>
             <li>Click anywhere outside of this message to get started!</li>
             <li>Enjoy :)</li>

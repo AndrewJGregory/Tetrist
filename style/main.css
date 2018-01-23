@@ -31,7 +31,7 @@ aside {
   font-family: 'Roboto', sans-serif;
 }
 
-#board {
+.board {
   height: 600px;
   width: 300px;
   display: flex;
@@ -74,6 +74,7 @@ aside {
 .directions {
   width: 200px;
   font-size: 16px;
+  letter-spacing: 1px;
 }
 
 li {

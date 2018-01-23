@@ -40,7 +40,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: green;
+  background-color: darkolivegreen;
 }
 
 .links {
@@ -54,6 +54,13 @@ aside {
 .square {
   height: 30px;
   width: 30px;
+  box-sizing: border-box;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+
+
+.red, .orange, .yellow, .blue, .purple, .white, .pink {
+  border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 .row {
@@ -61,29 +68,34 @@ aside {
 }
 
 .red {
-  background-color: red;
+  background-color: crimson;
+
 }
 
 .orange {
   background-color: orange;
+
 }
 
 .yellow {
   background-color: yellow;
+
 }
 
 .blue {
-  background-color: blue;
+  background-color: cornflowerblue;
+
 }
 
 .purple {
   background-color: purple;
+
 }
 
 .white {
   background-color: white;
 }
 
-.black {
-  background-color: black;
+.pink {
+  background-color: pink;
 }

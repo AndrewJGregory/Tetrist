@@ -2,49 +2,66 @@
 
 ## Background
 
-Tetrist is a twist on the classic arcade game of Tetris. The player is presented with a board with falling blocks on it. These can be moved or rotated to form rows, which are automatically cleared to score points.
+Tetrist is a remake of the classic arcade game of Tetris. The player is presented with a board with falling blocks on it. These can be moved or rotated to form rows, which are automatically cleared to score points.
 
-## Functionality & MVP
+## Basic rules
+Pieces will fall and the user can move the pieces left, right, or down and rotate the pieces clockwise/counter-clockwise. The goal is to form rows of pieces, which will then be cleared and everything to score points.
 
-With Tetrist, users will be able to:
-  * Start, pause, and restart the game
-  * Score points by clearing rows
-  * The game will be over when any block reaches the top of the board
-  * See the next piece that will fall
+## Implementation
 
-## Wireframes
+Tetrist was implemented with [https://github.com/AndrewJGregory/DOMination](DOMination) and some vanilla JS.
 
-![Tetrist Wireframe](http://res.cloudinary.com/procify/image/upload/v1516179907/Tetrist_gkajng.png)
+### Board Creation
+The board is a container with a fixed height and width. Squares are added to a row, then rows are appended to the board. A coordinate system is in place on the rows and the squares. This coordinate system is paramount to moving the pieces in any direction. The board is constructed as such:
 
-"Next piece" will only be displayed after the game is started.
+```
+generateRows() {
+  let row;
+  for (var y = 19; y >= 0; y--) {
+    row = this.createRow(y);
+    this.generateSquares(row, y);
+    this.board.append(row);
+  }
+}
 
-## Architecture & Technologies
+generateSquares(row, y) {
+  let square;
+  for (let x = 0; x < 10; x++) {
+    square = this.createSquare(x, y);
+    row.append(square);
+  }
+}
 
-The following technologies will be used:
-  * JavaScript for game logic
-  * Webpack to bundle JS files
+createSquare(x, y) {
+  const square = $d.create('div').addClass('square');
+  square.attr('x-pos', x);
+  square.attr('y-pos', y);
+  square.attr('isPiece', false);
+  const position = 'pos' + String(x) + String(y);
+  square.addClass(position);
+  return square;
+}
 
-In addition to the entry file `main.js`, there will be three scripts:
-  * `board.js`: handles DOM-specific logic, renders blocks on the board
-  * `piece.js`: handles creating a random piece
-  * `player.js`: handles user input and score
+createRow(y) {
+  const row = $d.create('div').addClass('row');
+  row.attr('y-pos', y);
+  const position = 'row-pos' + String(y);
+  row.addClass(position);
+  return row;
+}
+```
 
-## Implementation Timeline
+The position is stored as a class on a square, while the x position and y position are attributes.
 
-**Day 1:** Get webpack running, an entry file, write basic outlines of aforementioned files.
-  * Display a styled board, nav links, instructions
-  * Create only one piece object (instead of various random shapes)
-  * Get a piece to fall down the board with no user interaction
-  * Piece should stop falling at the bottom of the board
-  * Be able to move the piece (within the confines of the board) (keyboard interaction)
+### Piece Creation
 
-**Day 2:**
-  * Collision detection between pieces (similar to moving a piece within the confines of the board)
-  * A completed row should score a point and the row should clear, everything above moves down
-  * Play/pause game
-  * Generate random pieces (update displayed next piece)
+In Tetrist, there are seven unique shapes. Each shape has an associated ID, and any piece can exist in one of four orientations. To draw a piece on the board, a starting X and Y coordinate is selected. Particular deltas are used to select the squares using the aforementioned coordinate system. Here's an example for the `shapeId` of 1, which is the T piece:
 
-**Day 3:**
-  * Game over logic, when a piece is "over" the top of the board
-  * Various difficulties, pieces can move faster or slower
-  * Store scores using firebase
+```
+1: [
+  [[0, -1], [0, 0], [-1, -1], [1, -1]],
+  [[0, -1], [0, 0], [0, -2], [-1, -1]],
+  [[0, -1], [0, 0], [-1, 0], [1, 0]],
+  [[0, -1], [0, 0], [0, 1], [1, 0]]
+],
+```

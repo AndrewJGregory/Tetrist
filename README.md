@@ -13,7 +13,7 @@ Pieces will fall and the user can move the pieces left, right, or down and rotat
 
 ## Implementation
 
-Tetrist was implemented with [https://github.com/AndrewJGregory/DOMination](DOMination) and some vanilla JS.
+Tetrist was implemented with [DOMination](https://github.com/AndrewJGregory/DOMination), a lightweight DOM manipulation library and some vanilla JavaScript.
 
 ### Board Creation
 The board is a container with a fixed height and width. Squares are appended to a row, then rows are appended to the board. A coordinate system is constructed as a class on the rows and the squares. This coordinate system is critical to moving the pieces in any direction. The board is constructed as such:

@@ -53,12 +53,13 @@ aside {
   color: white;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .footer-links {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 75%;
   margin: 10px 0;
 }
 

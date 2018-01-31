@@ -26,6 +26,8 @@ aside {
   color: white;
   font-size: 36px;
   font-family: 'Roboto', sans-serif;
+  height: 700px;
+  justify-content: space-between;
 }
 
 .board {
@@ -83,4 +85,9 @@ li {
 
 .footer-links li {
   list-style: none;
+}
+
+.audio-controls {
+  font-size: 50px;
+  cursor: pointer;
 }

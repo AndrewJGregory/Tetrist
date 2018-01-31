@@ -15,16 +15,23 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-  <main className='center'>
-    <aside class='directions center'>
-      Directions:
-      <ul>
-        <li>Use the ASD keys to move a piece left, down, and right respectively.</li>
-        <li>Use the W key to rotate.</li>
-        <li>Press the spacebar to pause or resume the game.</li>
-        <li>Form rows with pieces to score points!</li>
-        <li>The game is over when the pieces reach the top of the board.</li>
-      </ul>
+  <audio src="./assets/Tetrist.mp3" volume='0.01'>
+  </audio>
+  <main>
+    <aside class='center'>
+      <div class='directions center'>
+        Directions:
+        <ul>
+          <li>Use the ASD keys to move a piece left, down, and right respectively.</li>
+          <li>Use the W key to rotate.</li>
+          <li>Press the spacebar to pause or resume the game.</li>
+          <li>Form rows with pieces to score points!</li>
+          <li>The game is over when the pieces reach the top of the board.</li>
+        </ul>
+      </div>
+      <div class="audio-controls center">
+        <i class="fa fa-2x fa-play" aria-hidden="true"></i>
+      </div>
     </aside>
     <div class='title-board-links-wrapper center'>
       <h1>Tetrist</h1>

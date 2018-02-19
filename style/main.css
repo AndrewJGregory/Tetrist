@@ -1,10 +1,10 @@
 body {
-  background-image: url('../assets/background.png');
+  background-image: url("../assets/background.png");
   background-size: 100vw 100vh;
 }
 
 h1 {
-  font-family: 'Monoton', cursive;
+  font-family: "Monoton", cursive;
   color: white;
   padding-bottom: 10px;
   font-size: 48px;
@@ -25,7 +25,7 @@ main {
 aside {
   color: white;
   font-size: 36px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 700px;
   justify-content: space-between;
 }
@@ -49,7 +49,7 @@ aside {
 
 .footer-text {
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }

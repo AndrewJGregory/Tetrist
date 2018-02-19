@@ -1,4 +1,3 @@
-
 .square {
   height: 30px;
   width: 30px;
@@ -6,7 +5,13 @@
   border: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
-.red, .orange, .yellow, .blue, .purple, .white, .pink {
+.red,
+.orange,
+.yellow,
+.blue,
+.purple,
+.white,
+.pink {
   border: 1px solid rgba(0, 0, 0, 0.8);
 }
 
@@ -16,27 +21,22 @@
 
 .red {
   background-color: crimson;
-
 }
 
 .orange {
   background-color: orange;
-
 }
 
 .yellow {
   background-color: yellow;
-
 }
 
 .blue {
   background-color: cornflowerblue;
-
 }
 
 .purple {
   background-color: purple;
-
 }
 
 .white {

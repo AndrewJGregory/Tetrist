@@ -1,0 +1,33 @@
+td,
+th {
+  padding: 5px;
+}
+
+.table-header {
+  padding-bottom: 20px;
+}
+
+table * {
+  font-size: 16px;
+}
+
+.name-input {
+  width: 50%;
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.name-input:focus {
+  outline: none;
+}
+.score-submit-btn {
+  padding: 10px;
+  width: 10%;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: green;
+  border: none;
+  color: white;
+}

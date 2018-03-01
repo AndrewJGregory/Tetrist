@@ -91,3 +91,22 @@ li {
   font-size: 50px;
   cursor: pointer;
 }
+
+.score-and-high-score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+td,
+th {
+  padding: 5px;
+}
+
+.table-header {
+  padding-bottom: 20px;
+}
+
+table * {
+  font-size: 16px;
+}

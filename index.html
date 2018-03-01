@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="./style/piece.css">
   <link rel="stylesheet" href="./style/modal.css">
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
-<script src="https://cdn.rawgit.com/AndrewJGregory/DOMination/78bdcc3e/lib/domination.js" charset="utf-8"></script>
-<script src="https://use.fontawesome.com/a09959baca.js"></script>
-<script src="./lib/bundle.js" charset="utf-8"></script>
-<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-<link href="./assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
+  <script src="https://cdn.rawgit.com/AndrewJGregory/DOMination/78bdcc3e/lib/domination.js" charset="utf-8"></script>
+  <script src="https://use.fontawesome.com/a09959baca.js"></script>
+  <script src="./lib/bundle.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <link href="./assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
   <audio src="./assets/Tetrist.mp3" volume='0.01'>
@@ -67,10 +67,26 @@
         </div>
       </div>
     </div>
-    <aside class="scoreCounter center">
-      Rows
-      cleared:
-      0
+    <aside class='score-and-high-score-container'>
+      <div class="scoreCounter center">
+        Rows
+        cleared:
+        0
+      </div>
+      <div class='table-container center'>
+        <h3 class='table-header'>High Scores</h3>
+        <table>
+          <thead>
+            <tr class='header-row'>
+              <th></th>
+              <th>Name</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
     </aside>
   </main>
   <div id="welcomeModal" class="modal">

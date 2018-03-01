@@ -129,3 +129,7 @@ table {
 a {
   color: white;
 }
+
+*:focus {
+  outline: none;
+}

@@ -89,11 +89,14 @@ li {
 
 .audio-controls {
   font-size: 50px;
-  cursor: pointer;
 }
 
 .score-and-high-score-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.clickable {
+  cursor: pointer;
 }

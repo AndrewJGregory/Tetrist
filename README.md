@@ -2,13 +2,14 @@
 
 ## Background
 
-Tetrist is a remake of the classic arcade game of Tetris. The player is presented with a board with falling blocks on it. These can be moved or rotated to form rows, which are automatically cleared to score points.
+Tetrist is a remake of the classic arcade game of Tetris. The player is presented with a board with falling blocks on it. These can be moved or rotated to form rows, which are automatically cleared to score points. Google Firebase is used to store high scores.
 
 ## Terminology
 
-  * Collection: A group of `HTMLElement`s wrapped in a `DOMNodeCollection` object. A "piece" in Tetrist is merely a group of `HTMLElement`s that is manipulated as a single unit.
+* Collection: A group of `HTMLElement`s wrapped in a `DOMNodeCollection` object. A "piece" in Tetrist is merely a group of `HTMLElement`s that is manipulated as a single unit.
 
 ## Basic rules
+
 Pieces will fall and the user can move the pieces left, right, or down and rotate the pieces clockwise/counter-clockwise. The goal is to form rows of pieces, which will then be cleared and everything to score points.
 
 ## Implementation
@@ -16,6 +17,7 @@ Pieces will fall and the user can move the pieces left, right, or down and rotat
 Tetrist was implemented with [DOMination](https://github.com/AndrewJGregory/DOMination), a lightweight DOM manipulation library and some vanilla JavaScript.
 
 ### Board Creation
+
 The board is a container with a fixed height and width. Squares are appended to a row, then rows are appended to the board. A coordinate system is constructed as a class on the rows and the squares. This coordinate system is critical to moving the pieces in any direction. The board is constructed as such:
 
 ```
@@ -53,7 +55,6 @@ createSquare(x, y) {
   square.addClass(position);
   return square;
 }
-
 ```
 
 The position is stored as a class on a square, while the x position and y position are attributes.
@@ -99,6 +100,7 @@ Now, the new collection is drawn on the board as a piece because the DOM was man
 Without any user interaction, a piece moves down by itself. A simple `setInterval` is used to repeatedly remove the current collection on the board and draw the next collection. After verifying that the next collection will not collide with any other piece and will stay within the confines of the board, then the current collection is removed and the next collection is drawn. This next piece is the same exact collection with the y-coordinates of all squares shifted down one square.
 
 The piece is removed from the board:
+
 ```
 removeCurrentPiece() {
   const shapeId = this.collection.attr('shape-id');
@@ -134,7 +136,7 @@ const generateUserMoveCollection = (piece, delta) => {
 ***REMOVED***
 ```
 
-``newSq = $d(`.pos${newSqPos}`)`` grabs the next square by class, which is where the coordinate system is in place.
+`` newSq = $d(`.pos${newSqPos}`) `` grabs the next square by class, which is where the coordinate system is in place.
 
 This is collection is finalized and given the attributes of a piece as before, then drawn on the board:
 

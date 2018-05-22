@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Tetrist</title>
@@ -19,6 +20,7 @@
   <link href="./assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
+
 <body>
   <audio src="./assets/Tetrist.mp3" volume='0.01'>
   </audio>
@@ -50,11 +52,6 @@
             </a>
           </li>
           <li>
-            <a href="https://angel.co/andrew-gregory-6?public_profile=1">
-              <i class="fa fa-2x fa-angellist" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
             <a href="https://github.com/AndrewJGregory/">
               <i class="fa fa-2x fa-github" aria-hidden="true"></i>
             </a>
@@ -63,17 +60,18 @@
         <div class='footer-text-container center'>
           <h3 class='footer-text'>
             Made by
-            <a href="http://andrewjgregoryajg.com">Andrew Gregory</a> with the help of <a href="https://github.com/AndrewJGregory/DOMination">DOMination.</a>
+            <a href="http://andrewjgregoryajg.com">Andrew Gregory</a> with the help of
+            <a href="https://github.com/AndrewJGregory/DOMination">DOMination.</a>
           </h3>
-          <h3 class='footer-text'><a href="http://andrewjgregoryajg.com">My website can be found here.</a></h3>
+          <h3 class='footer-text'>
+            <a href="http://andrewjgregoryajg.com">My website can be found here.</a>
+          </h3>
         </div>
       </div>
     </div>
     <aside class='score-and-high-score-container'>
       <div class="scoreCounter center">
-        Rows
-        cleared:
-        0
+        Rows cleared: 0
       </div>
       <div class='table-loading-msg-wrapper center'>
         <div class='table-container loader'>
@@ -98,34 +96,35 @@
     <div class="modal-content center">
       <h3>Welcome to Tetrist!</h2>
         <h4>How to play:</h3>
-          <br>
-          <ul>
-            <li>Use the ASD keys to move a piece left, down, and right respectively.</li>
-            <li>Use the W key to rotate.</li>
-            <li>Press the spacebar to pause or resume the game.</li>
-            <li>Form rows with pieces to score points.</li>
-            <li>The game is over when the pieces overflow the top of the board.</li>
-            <li>Press any key to start playing!</li>
-            <li>Enjoy :)</li>
-          </ul>
-        </div>
-      </div>
-      <div id="playPauseModal" class="modal">
-        <div class="modal-content center">
-          <h3>PAUSED</h3>
-          <p>Press the spacebar to resume playing.</p>
-        </div>
-      </div>
-      <div id="gameOverModal" class="modal">
-        <div class="modal-content center">
-          <h3>Game over!</h3>
-          <h3 class="extra-game-over-text">Submit your high score to play again.</h3>
-          <form>
-            <input class='name-input' type='text' placeholder='Enter your name here to save your high score.'>
-            <h4 class='name-input-error-msg'></h4>
-            <button class='score-submit-btn clickable'>Submit score</button>
-          </form>
-        </div>
-      </div>
-    </body>
-    </html>
+      <br>
+      <ul>
+        <li>Use the ASD keys to move a piece left, down, and right respectively.</li>
+        <li>Use the W key to rotate.</li>
+        <li>Press the spacebar to pause or resume the game.</li>
+        <li>Form rows with pieces to score points.</li>
+        <li>The game is over when the pieces overflow the top of the board.</li>
+        <li>Press any key to start playing!</li>
+        <li>Enjoy :)</li>
+      </ul>
+    </div>
+  </div>
+  <div id="playPauseModal" class="modal">
+    <div class="modal-content center">
+      <h3>PAUSED</h3>
+      <p>Press the spacebar to resume playing.</p>
+    </div>
+  </div>
+  <div id="gameOverModal" class="modal">
+    <div class="modal-content center">
+      <h3>Game over!</h3>
+      <h3 class="extra-game-over-text">Submit your high score to play again.</h3>
+      <form>
+        <input class='name-input' type='text' placeholder='Enter your name here to save your high score.'>
+        <h4 class='name-input-error-msg'></h4>
+        <button class='score-submit-btn clickable'>Submit score</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -5,6 +5,10 @@
   border: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
+.preview {
+  border: 1px solid white;
+}
+
 .red,
 .orange,
 .yellow,

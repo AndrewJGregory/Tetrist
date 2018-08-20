@@ -6,7 +6,7 @@ Tetrist is a remake of the classic arcade game of Tetris. The player is presente
 
 ## Terminology
 
-* Collection: A group of `HTMLElement`s wrapped in a `DOMNodeCollection` object. A "piece" in Tetrist is merely a group of `HTMLElement`s that is manipulated as a single unit.
+- Collection: A group of `HTMLElement`s wrapped in a `DOMNodeCollection` object. A "piece" in Tetrist is merely a group of `HTMLElement`s that is manipulated as a single unit.
 
 ## Basic rules
 
@@ -88,7 +88,7 @@ const finalizePiece = (collection, shapeId) => {
   .attr('shape-id', shapeId)
   .attr('isPiece', true);
   return collection;
-***REMOVED***
+};
 ```
 
 Now, the new collection is drawn on the board as a piece because the DOM was manipulated:
@@ -133,7 +133,7 @@ const generateUserMoveCollection = (piece, delta) => {
   }
 
   return collection;
-***REMOVED***
+};
 ```
 
 `` newSq = $d(`.pos${newSqPos}`) `` grabs the next square by class, which is where the coordinate system is in place.

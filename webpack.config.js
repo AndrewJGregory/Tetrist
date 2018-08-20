@@ -8,4 +8,4 @@ module.exports = {
     filename: "bundle.js"
   },
   devtool: "source-map"
-***REMOVED***
+};

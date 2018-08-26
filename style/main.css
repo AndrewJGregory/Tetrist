@@ -98,7 +98,7 @@ li {
   font-size: 50px;
 }
 
-.score-and-high-score-container {
+.right-info-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -110,4 +110,20 @@ li {
 
 .not-allowed {
   cursor: not-allowed;
+}
+
+.preview-piece {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.preview-piece p {
+  color: black;
+  padding-bottom: 10px;
+}
+
+.no-border {
+  border: 0;
 }

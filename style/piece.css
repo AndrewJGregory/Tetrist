@@ -1,4 +1,5 @@
-.square {
+.square,
+.preview-square {
   height: 30px;
   width: 30px;
   box-sizing: border-box;

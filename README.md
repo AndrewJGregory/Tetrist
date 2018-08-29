@@ -20,7 +20,7 @@ Tetrist was implemented with [DOMination](https://github.com/AndrewJGregory/DOMi
 
 The board is a container with a fixed height and width. Squares are appended to a row, then rows are appended to the board. A coordinate system is constructed as a class on the rows and the squares. This coordinate system is critical to moving the pieces in any direction. The board is constructed as such:
 
-```
+```js
 generateRows() {
   let row;
   for (var y = 19; y >= 0; y--) {
@@ -80,14 +80,11 @@ Each of these arrays correspond exactly in order to the T pieces in the image.
 
 To generate a piece, the squares are selected by position which is a class on every square. This is wrapped in a `DOMination` collection, which is at its core an array of `HTMLElement`s. To draw the collection on the board, the collection is finalized and given the attributes of a piece, like so:
 
-```
-const finalizePiece = (collection, shapeId) => {
-  const color = generateColor(shapeId);
-  collection.addClass(`${color}`)
-  .addClass('moving')
-  .attr('shape-id', shapeId)
-  .attr('isPiece', true);
-  return collection;
+```js
+const finalizePiece = (collection, color) => {
+  collection.addClass(`${color}`);
+  collection.addClass("moving");
+  collection.attr("isPiece", true);
 };
 ```
 
@@ -101,10 +98,8 @@ Without any user interaction, a piece moves down by itself. A simple `setInterva
 
 The piece is removed from the board:
 
-```
+```js
 removeCurrentPiece() {
-  const shapeId = this.collection.attr('shape-id');
-  const color = util.generateColor(`${shapeId}`);
   this.collection.removeClass(`${color}`);
   this.collection.removeClass('moving');
   this.collection.attr('isPiece', false);
@@ -117,16 +112,15 @@ The board is then blank:
 
 The piece is moved down by reading the `y-pos` of every square in the collection and subtracting 1, thereby moving it down. The same function that handles user input can also be used to move the piece down naturally, since a user manually moving a piece down is the same as a piece naturally 'falling' down. Here, delta would be [0, -1]:
 
-```
+```js
 const generateUserMoveCollection = (piece, delta) => {
   const collection = $d();
   let newSqPos, newSq, newYpos, newXpos, HTMLel;
-  const { shapeId } = getAttributes(piece);
 
-  for (let i = 0; i < piece.HTMLels.length; i++) {
-    HTMLel = piece.HTMLels[i];
-    newYpos = parseInt(HTMLel.getAttribute('y-pos')) + delta[1];
-    newXpos = parseInt(HTMLel.getAttribute('x-pos')) + delta[0];
+  for (let i = 0; i < piece.collection.HTMLels.length; i++) {
+    HTMLel = piece.collection.HTMLels[i];
+    newYpos = parseInt(HTMLel.getAttribute("y-pos")) + delta[1];
+    newXpos = parseInt(HTMLel.getAttribute("x-pos")) + delta[0];
     newSqPos = String(newXpos) + String(newYpos);
     newSq = $d(`.pos${newSqPos}`);
     collection.concat(newSq);
